@@ -66,3 +66,29 @@ console.log(message1);
 // 文字列の中でJSを使いたいときは${変数}でいける
 const message2 = `私の名前は${name}です。年齢は${age}です`;
 console.log(message2);
+
+/**
+ * アロー関数
+ */
+//従来の関数
+// function func1(str) {
+//   return str;
+// }
+const func1 = function (str) {
+  return str;
+};
+console.log(func1("あああああ"));
+
+//アロー関数
+const func2 = (str) => {
+  return str;
+};
+//処理が一行で完結するときの書き方、｛｝とリターンを省略できる
+const func3 = (str) => str;
+console.log(func2("ああああい"));
+
+//二つの引数
+const func33 = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(func33(10, 20));
