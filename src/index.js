@@ -52,20 +52,20 @@
 /**
  * テンプレート文字列
  */
-const name = "じぇけぇ";
-const age = 28;
+// const name = "じぇけぇ";
+// const age = 28;
 //　私の名前はじぇけぇです。年齢は28歳です
 
 // 従来の方法
-const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
-console.log(message1);
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+// console.log(message1);
 
 // テンプレート文字列を用いた方法
 // テンプレート文字列はバッククオート「``」を用いる
 // バッククオートはShift + @ でできる
 // 文字列の中でJSを使いたいときは${変数}でいける
-const message2 = `私の名前は${name}です。年齢は${age}です`;
-console.log(message2);
+// const message2 = `私の名前は${name}です。年齢は${age}です`;
+// console.log(message2);
 
 /**
  * アロー関数
@@ -92,3 +92,29 @@ const func33 = (num1, num2) => {
   return num1 + num2;
 };
 console.log(func33(10, 20));
+
+/**
+ * 分割代入
+ */
+// const myProfile = {
+//   name: "じゃけぇ",
+//   age: 28
+// };
+
+// const message1 = `名前は${myProfile.name}です年齢は${myProfile.age}です`;
+// console.log(message1);
+
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です年齢は${age}です`;
+// console.log(message2);
+
+//配列の分割代入
+
+const myProfile = ["じゃけぇ", 28];
+
+const message3 = `名前は${myProfile[0]}です。\n 年齢は${myProfile[1]}です。`;
+console.log(message3);
+
+const [name, age] = myProfile;
+const message4 = `名前は${name}です。\n年齢は${age}です・。`;
+console.log(message4);
