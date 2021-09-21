@@ -74,24 +74,24 @@
 // function func1(str) {
 //   return str;
 // }
-const func1 = function (str) {
-  return str;
-};
-console.log(func1("あああああ"));
+// const func1 = function (str) {
+//   return str;
+// };
+// console.log(func1("あああああ"));
 
-//アロー関数
-const func2 = (str) => {
-  return str;
-};
-//処理が一行で完結するときの書き方、｛｝とリターンを省略できる
-const func3 = (str) => str;
-console.log(func2("ああああい"));
+// //アロー関数
+// const func2 = (str) => {
+//   return str;
+// };
+// //処理が一行で完結するときの書き方、｛｝とリターンを省略できる
+// const func3 = (str) => str;
+// console.log(func2("ああああい"));
 
-//二つの引数
-const func33 = (num1, num2) => {
-  return num1 + num2;
-};
-console.log(func33(10, 20));
+// //二つの引数
+// const func33 = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(func33(10, 20));
 
 /**
  * 分割代入
@@ -110,11 +110,30 @@ console.log(func33(10, 20));
 
 //配列の分割代入
 
-const myProfile = ["じゃけぇ", 28];
+// const myProfile = ["じゃけぇ", 28];
 
-const message3 = `名前は${myProfile[0]}です。\n 年齢は${myProfile[1]}です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。\n 年齢は${myProfile[1]}です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。\n年齢は${age}です・。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。\n年齢は${age}です・。`;
+// console.log(message4);
+
+/**
+ * デフォルト値、引数など
+ */
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは${name}さん！`);
+// sayHello();
+
+/**
+ * スプレッド構文
+ * 「...」のようにドットが3つ続くもの
+ * 配列の中身を一個ずつ取り出してくれる
+ */
+//配列の展開
+// const ary1 = [1, 2];
+// console.log(ary1);
+// console.log(...ary1);
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// sumFunc(ary1[0], ary1[1]);
+// sumFunc(...ary1);
