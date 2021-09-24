@@ -137,3 +137,60 @@
 // const sumFunc = (num1, num2) => console.log(num1 + num2);
 // sumFunc(ary1[0], ary1[1]);
 // sumFunc(...ary1);
+
+/**
+ * 配列をまとめる
+ */
+// const ary2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...ary3] = ary2;
+// console.log(num1);
+// console.log(num2);
+// console.log(ary3);
+
+//配列のコピー
+// const ary4 = [10, 20];
+// const ary6 = [...ary4]; //スプレッド構文で配列に入れることでコピーできる
+// console.log(ary6);
+
+//配列の結合
+// const ary5 = [30, 40];
+// const ary7 = [...ary4, ...ary5];
+// console.log(ary7);
+
+// MapやFilterの処理
+// 従来の配列forループ
+const nameAry = ["田中", "山田", "前田"];
+// for (let index = 0; index < nameAry.length; index++) {
+//   console.log(nameAry[index]);
+// }
+
+// // Map
+// const nameAry2 = nameAry.map((name) => {
+//   return name;
+// });
+// console.log(nameAry2);
+// // 省略版
+// nameAry.map((name) => console.log(name));
+// 省略版で番号管理したい場合
+// 要素の番号は引数の２番目に入っている。
+// nameAry.map((name, index) => console.log(`${index + 1}番目：${name}です。`));
+
+/**
+ * Filter (ある条件に一致したものだけ返却して、新しい配列を生成する関数のこと)
+ */
+// const numAry = [1, 2, 3, 4, 5];
+// const newNumAry = numAry.filter((num) => {
+//   //filterのリターンは条件式を記載する必要がある。
+//   return num % 2 === 1;
+// });
+// console.log(newNumAry);
+
+//指定以外の場合は違う中身を表示する
+const newNameAry = nameAry.map((name) => {
+  if (name === "山田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameAry);
