@@ -159,7 +159,7 @@
 
 // MapやFilterの処理
 // 従来の配列forループ
-const nameAry = ["田中", "山田", "前田"];
+//const nameAry = ["田中", "山田", "前田"];
 // for (let index = 0; index < nameAry.length; index++) {
 //   console.log(nameAry[index]);
 // }
@@ -186,11 +186,33 @@ const nameAry = ["田中", "山田", "前田"];
 // console.log(newNumAry);
 
 //指定以外の場合は違う中身を表示する
-const newNameAry = nameAry.map((name) => {
-  if (name === "山田") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameAry);
+// const newNameAry = nameAry.map((name) => {
+//   if (name === "山田") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameAry);
+
+/**
+ * 三項演算子
+ * ある条件？条件がtrueのとき：条件がfalseのとき;
+ */
+// const val1 = 1 < 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = 1300;
+// // toLocaleString()は3桁くぎりのカンマ区切りにしてくれるやつ
+// // 文字列に対しては有効にはならない
+// console.log(num.toLocaleString());
+
+// const num1 = "1300";
+// const formattedNum =
+//   typeof num1 === "number" ? num1.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+console.log(checkSum(50, 60));
